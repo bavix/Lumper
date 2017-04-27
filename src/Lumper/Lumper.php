@@ -42,7 +42,7 @@ class Lumper
      *
      * @return object
      */
-    protected function once(callable $callback, $unique = null)
+    public function once(callable $callback, $unique = null)
     {
         $this->_unique($callback, $unique);
 
