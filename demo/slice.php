@@ -17,14 +17,12 @@ function fibonacci($a)
 
 function fibonacciFrom($slice)
 {
-    var_dump($slice);
-    
     $results = [];
 
     foreach ($slice as $slouse)
     {
         $results = fibonacci($slouse);
-    }var_dump($results);
+    }
 
     return $results;
 }
@@ -32,4 +30,17 @@ function fibonacciFrom($slice)
 $result = $lumper->once('fibonacciFrom', $slice);
 $result = $lumper->once('fibonacciFrom', $slice);
 
-var_dump($result);
+$slice[0] = 8;
+
+$result = $lumper->once('fibonacciFrom', $slice);
+$result = $lumper->once('fibonacciFrom', $slice);
+
+$first = $lumper->once('mt_rand');
+$lumper->once('mt_rand');
+$lumper->once('mt_rand');
+$lumper->once('mt_rand');
+$lumper->once('mt_rand');
+$lumper->once('mt_rand');
+
+var_dump($lumper);
+var_dump($lumper->once('mt_rand') === $first);

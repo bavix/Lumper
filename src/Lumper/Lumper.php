@@ -2,6 +2,8 @@
 
 namespace Bavix\Lumper;
 
+use Bavix\Slice\Slice;
+
 class Lumper
 {
 
@@ -15,7 +17,7 @@ class Lumper
      *
      * @return string
      */
-    protected function _hash(callable $callback)
+    protected function _string(callable $callback)
     {
         return new Reflection\Func($callback);
     }
@@ -28,9 +30,9 @@ class Lumper
      */
     protected function _unique(callable $callback, $hash)
     {
-        if (null === $hash)
+        if (null === $hash || $hash instanceof Slice)
         {
-            $hash = $this->_hash($callback);
+            $hash .= $this->_string($callback);
         }
 
         return $hash;
@@ -48,7 +50,10 @@ class Lumper
 
         if (empty($this->instances[$_]))
         {
-            $this->instances[$_] = $callback($unique);
+            $this->instances[$_] =
+                $unique instanceof Slice ?
+                    $callback($unique) :
+                    $callback();
         }
 
         return $this->instances[$_];
