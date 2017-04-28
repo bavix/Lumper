@@ -17,23 +17,23 @@ class Lumper
      */
     protected function _hash(callable $callback)
     {
-        return (string)new Reflection\Func($callback);
+        return new Reflection\Func($callback);
     }
 
     /**
      * @param callable $callback
-     * @param string   $string
+     * @param string   $hash
      *
      * @return string
      */
-    protected function _unique(callable $callback, &$string)
+    protected function _unique(callable $callback, $hash)
     {
-        if (!$string)
+        if (null === $hash)
         {
-            $string = $this->_hash($callback);
+            $hash = $this->_hash($callback);
         }
 
-        return $string;
+        return $hash;
     }
 
     /**
@@ -44,14 +44,14 @@ class Lumper
      */
     public function once(callable $callback, $unique = null)
     {
-        $this->_unique($callback, $unique);
+        $_ = (string)$this->_unique($callback, $unique);
 
-        if (empty($this->instances[$unique]))
+        if (empty($this->instances[$_]))
         {
-            $this->instances[$unique] = $callback();
+            $this->instances[$_] = $callback($unique);
         }
 
-        return $this->instances[$unique];
+        return $this->instances[$_];
     }
 
 }

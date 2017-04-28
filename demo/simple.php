@@ -2,7 +2,8 @@
 
 include_once dirname(__DIR__) . '/vendor/autoload.php';
 
-class Lumper extends \Bavix\Lumper\Lumper {
+class Lumper extends \Bavix\Lumper\Lumper
+{
 
     public function hello()
     {

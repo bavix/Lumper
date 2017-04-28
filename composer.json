@@ -12,5 +12,8 @@
     "psr-4": {
       "Bavix\\": "src/"
     }
+  },
+  "require-dev": {
+    "bavix/slice": "^1.0"
   }
 }
