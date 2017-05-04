@@ -42,7 +42,7 @@ class Lumper
      * @param callable $callback
      * @param string   $unique
      *
-     * @return object
+     * @return mixed
      */
     public function once(callable $callback, $unique = null)
     {
