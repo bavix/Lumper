@@ -8,12 +8,13 @@
       "email": "info@babichev.net"
     }
   ],
+  "require-dev": {
+    "bavix/slice": "^1.0",
+    "bavix/tests": "^1.0"
+  },
   "autoload": {
     "psr-4": {
       "Bavix\\": "src/"
     }
-  },
-  "require-dev": {
-    "bavix/slice": "^1.0"
   }
 }
