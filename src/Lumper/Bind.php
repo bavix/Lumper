@@ -2,20 +2,13 @@
 
 namespace Bavix\Lumper;
 
-class Bind
+abstract class Bind
 {
 
     /**
      * @var Lumper
      */
     protected static $lump;
-
-    /**
-     * Bind constructor.
-     */
-    protected function __construct()
-    {
-    }
 
     /**
      * @return Lumper

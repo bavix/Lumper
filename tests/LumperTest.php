@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Bavix\Lumper\Bind;
 use Bavix\Lumper\Lumper;
 use Bavix\Slice\Slice;
 use Bavix\Tests\Unit;
