@@ -10,7 +10,7 @@
 [![License](https://poser.pugx.org/bavix/lumper/license)](https://packagist.org/packages/bavix/lumper)
 [![composer.lock](https://poser.pugx.org/bavix/lumper/composerlock)](https://packagist.org/packages/bavix/lumper)
 
-Lumper - Storage of objects.
+Lumper - objects in storage are created only once.
 
 * **Vendor**: bavix
 * **Package**: lumper
