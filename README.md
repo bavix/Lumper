@@ -5,6 +5,7 @@
 [![Build Status](https://scrutinizer-ci.com/g/bavix/lumper/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bavix/lumper/build-status/master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/bavix/lumper/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
+[![Package Rank](https://phppackages.org/p/bavix/lumper/badge/rank.svg)](https://packagist.org/packages/bavix/lumper)
 [![Latest Stable Version](https://poser.pugx.org/bavix/lumper/v/stable)](https://packagist.org/packages/bavix/lumper)
 [![Latest Unstable Version](https://poser.pugx.org/bavix/lumper/v/unstable)](https://packagist.org/packages/bavix/lumper)
 [![License](https://poser.pugx.org/bavix/lumper/license)](https://packagist.org/packages/bavix/lumper)
